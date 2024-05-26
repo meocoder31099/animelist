@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Svelte Select custom css */
+
+.svelte-select {
+  @apply max-w-[100%] min-w-[8rem] border border-neutral-200 rounded box-border h-10 leading-10 relative flex items-center bg-neutral-900 m-0 w-full hover:border-neutral-300;
+}
+
+.value-container {
+  @apply flex flex-1 flex-wrap items-center gap-2 p-2 relative text-sm overflow-hidden;
+}
+
+.svelte-select input {
+  @apply cursor-default border-none text-neutral-600 px-2 bg-transparent absolute left-0 m-0 w-full text-sm focus:outline-none hover:border-neutral-400;
+}
+
+/* .svelte-select.focused {
+    @apply border-amber-400;
+} */
+
+.svelte-select.disabled {
+  @apply bg-neutral-900 opacity-50 cursor-not-allowed border-neutral-400 text-neutral-600;
+}
+
+.svelte-select.disabled input {
+  @apply placeholder:text-neutral-400 cursor-not-allowed placeholder:opacity-100;
+}
+
+.svelte-select .selected-item {
+  @apply leading-10 h-10 overflow-x-hidden pr-5
+        focus:outline-none;
+}
+
+.svelte-select .icons {
+  @apply absolute flex items-center right-0 translate-y-0 text-neutral-200 pointer-events-none top-0 bottom-0;
+}
+
+.svelte-select .icons > * {
+  @apply transition-colors ease-in-out duration-200;
+}
+
+.svelte-select .clear-select {
+  @apply pointer-events-auto;
+}
+
+.svelte-select.focused .icons,
+.svelte-select .chevron:hover,
+.svelte-select .clear-select:hover {
+  @apply text-neutral-600;
+}
+
+.svelte-select .clear-select {
+  @apply px-2 h-5 text-neutral-300 flex-none w-9;
+}
+
+.svelte-select .chevron {
+  @apply flex pt-0 pr-2 pl-2 border-l-2 w-9 h-5 text-neutral-300;
+}
+
+.svelte-select.multi {
+  @apply h-auto flex-wrap items-center;
+}
+
+.svelte-select.multi input {
+  @apply p-0 relative m-0;
+}
+
+.svelte-select.error {
+  @apply border-red-500 bg-white;
+}
+
+.svelte-select-list {
+  @apply rounded max-h-64 overflow-y-auto bg-neutral-800 absolute z-10 scrollbar-w-1 scrollbar-thin  scrollbar-thumb-neutral-500;
+}
+
+.a11y-text {
+  @apply sr-only;
+}
+
+.list {
+  @apply shadow-md rounded-sm max-h-64 overflow-y-auto bg-white border-none absolute z-10 w-full left-0 right-0;
+}
+
+.list,
+.list-group-title {
+  @apply !text-white cursor-default text-sm font-semibold h-10 leading-10 px-5 overflow-ellipsis whitespace-nowrap uppercase;
+}
+
+.list .empty {
+  @apply text-center py-5 text-neutral-500;
+}
+
+.item {
+  @apply cursor-pointer h-10 leading-10 px-2 text-neutral-200 overflow-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.item.group-item {
+  @apply px-5;
+}
+
+.item:active {
+  @apply bg-blue-200;
+}
+
+.item.active {
+  @apply bg-blue-600 text-white;
+}
+
+.item.not-selectable {
+  @apply text-neutral-300 cursor-default hover:!bg-neutral-800;
+}
+
+.item.first {
+  @apply rounded-t-sm;
+}
+
+.item.hover:not(.active) {
+  @apply bg-neutral-700;
+}
+
+.multi input {
+  @apply flex-1;
+}
+
+.multi-item {
+  @apply bg-neutral-800 px-1 border border-neutral-700 rounded flex cursor-pointer max-w-full items-center overflow-hidden overflow-ellipsis whitespace-nowrap;
+}
+
+.multi-item.disabled {
+  @apply hover:bg-neutral-300 hover:text-neutral-500;
+}
+
+.multi-item-clear {
+  @apply flex items-center justify-center w-5;
+}
+
+.list-item {
+  @apply list-none;
+}
+.indicators {
+  @apply flex items-center;
+}
