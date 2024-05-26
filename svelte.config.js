@@ -12,7 +12,7 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			runtime: '18.x'
+			runtime: 'nodejs18.x'
 			// out: 'build',
 			// precompress: true,
 			// envPrefix: 'ANICRUSH_'
