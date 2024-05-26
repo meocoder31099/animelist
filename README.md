@@ -13,6 +13,7 @@
 - Social
 - Forum
 - User profile
+- Light mode
 - Custom theme
 
 ## Installation
